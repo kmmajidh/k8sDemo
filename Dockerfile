@@ -1,4 +1,4 @@
-FROM tomcat:8.0.20-jre8
+FROM tomcat:8-jdk8-adoptopenjdk-hotspot
 
 RUN mkdir /usr/local/tomcat/webapps/myapp
 
