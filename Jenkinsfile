@@ -2,9 +2,9 @@ pipeline {
     agent any 	
 	environment {
 		
-		PROJECT_ID = 'third-fire-260721'
-                CLUSTER_NAME = 'k8s-cluster'
-                LOCATION = 'europe-north1-a'
+		PROJECT_ID = 'avian-altar-279211'
+                CLUSTER_NAME = 'cluster-1'
+                LOCATION = 'asia-northeast3-a'
                 CREDENTIALS_ID = 'kubernetes'		
 	}
 	
@@ -32,7 +32,7 @@ pipeline {
 		steps {
 		   sh 'whoami'
                    script {
-		      myimage = docker.build("kumarmitdocker/devops:${env.BUILD_ID}")
+		      myimage = docker.build("kmmajidh/tomcat01:${env.BUILD_ID}")
                    }
                 }
 	   }
